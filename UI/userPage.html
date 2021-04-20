@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	
+  	<title>User Home</title>
+    <!-- bootstrap 5 css CDN -->
+  	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- bootstrap 5 CDN end -->
+    <!-- bootstrap 5 js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    <!-- bootstrap 5 js CDN end -->
+    <!-- chart.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js" integrity="sha512-hZf9Qhp3rlDJBvAKvmiG+goaaKRZA6LKUO35oK6EsM0/kjPK32Yw7URqrq3Q+Nvbbt8Usss+IekL7CRn83dYmw==" crossorigin="anonymous"></script>
+    <!-- charts.js CDN end -->
+    
+    <link rel="stylesheet" type="text/css" href="assets/userstyle.css">
+    <link rel="icon" type="img/gif" href="assets/images/admin-logo.png">  
+  </head>
+
+  <body>
+  	 <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-info navCon">
+      <img src="assets/images/favicon.png" alt="dog-logo" class="dog-logo">
+      <a class="navbar-brand" href="#home">Woof - Dog care system</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#services1">Canine Management</a>            
+              <a class="dropdown-item" href="#services2">Acessories Stores</a>
+              <div class="dropdown-divider"></div>              
+              <a class="dropdown-item" href="#services3">Care centers</a>
+              <a class="dropdown-item" href="#services4">Walkers</a>
+              <a class="dropdown-item" href="#services5">Vet Online</a>
+            </div>
+          </li>         
+          <li class="nav-item">
+            <a class="nav-link" href="#contactUs">Manage Dogs</a>
+          </li>                   
+          <li class="nav-item">
+            <a class="nav-link" href="#contactUs">Contact Us</a>
+          </li>                   
+        </ul>
+        <form class="form-inline my-2 my-lg-0">         
+          <button class="btn btn-outline-danger btn-md mr-4" type="button">Sign Out</button>                   
+        </form>
+
+      </div>
+    </nav>
+  <!-- Header end -->
+
+    <div>
+      <!-- side navbar -->
+       <!--  <div>
+          <nav id="sidebar" class="col sidebar">
+            <a href="#" class="navbar-brand">
+              <img src="Assets/web_developer.png" alt="logo" class="logo">
+            </a>
+            <ul class="nav flex-column vertical-nav" id="links">
+              <li class="nav-item">
+                <a class="nav-link side active" href="#home">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                  </svg>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link side" href="#tables">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-spreadsheet-fill" viewBox="0 0 16 16">
+                    <path d="M12 0H4a2 2 0 0 0-2 2v4h12V2a2 2 0 0 0-2-2zm2 7h-4v2h4V7zm0 3h-4v2h4v-2zm0 3h-4v3h2a2 2 0 0 0 2-2v-1zm-5 3v-3H6v3h3zm-4 0v-3H2v1a2 2 0 0 0 2 2h1zm-3-4h3v-2H2v2zm0-3h3V7H2v2zm4 0V7h3v2H6zm0 1h3v2H6v-2z"/>
+                  </svg>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link side" href="#addUser">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                </svg>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link side" href="#charts">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bar-chart-fill" viewBox="0 0 16 16">
+                    <path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+
+          </nav>
+        </div> -->
+      <!-- end side navbar  -->
+      
+      <!-- main-content -->  
+        <div class="main col-11">
+          <!-- first row -->
+          <a name="home"></a>
+            <div class="row first-row">
+            <!-- resently added users -->    
+              <div class="col-4">
+                <section id="recently-posted">
+                  <div class="card">
+                    <div class="card-header">
+                      Your Dogs
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <div class="row g-0">
+                          <div class="col-md-3">
+                            <img src="assets/images/reg1.jpg"  alt="Post One Photo" class="img-fluid rounded-lg">
+                          </div>
+                          <div class="col-md-9">
+                            <div class="card-body">
+                              <h6 class="card-title">Tommy</h6>
+                              <p class="card-text"> 8 Years, Male</p>
+                              <p class="card-text"><small class="text-muted">Added 3 days ago</small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="row g-0">
+                          <div class="col-md-3">
+                            <img src="assets/images/reg1.jpg"  alt="Post One Photo" class="img-fluid rounded-lg">
+                          </div>
+                          <div class="col-md-9">
+                            <div class="card-body">
+                              <h6 class="card-title">Ripu</h6>
+                              <p class="card-text">5 years,Female</p>
+                              <p class="card-text"><small class="text-muted">Added 5 days ago</small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <button class="btn btn-primary"> Add dog</button>
+                </section>
+              </div>  
+            <!-- end recently added users -->  
+
+            <!-- stats -->
+            <div class="col-8">
+                <!-- <section id="statistics">
+                  <div class="card">
+                    <div class="card-header">
+                      Requests
+                    </div>
+                      <div class="stats py-3 px-4">
+                        <div class="py-4">
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <p class="card-text">Web Registered User</p>
+                        </div>
+                        <div class="py-4">
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <p class="card-text">Admin Registered User</p>
+                        </div>
+                        <div class="py-4">
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 67%" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <p class="card-text">Costomers</p>
+                        </div>
+                        <div class="py-4">
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <p class="card-text">Blogers</p>
+                        </div>
+                        <div class="py-4">
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 13%" aria-valuenow="13" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <p class="card-text">Help-Centers and walkers</p>
+                        </div>
+                      </div>
+                  </div>
+                </section>
+              </div> -->
+            <!-- end stats -->
+             <section id="recently-posted">
+                  <div class="card">
+                    <div class="card-header">
+                      Your Requests
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <div class="row g-0">
+                          <div class="col-md-3">
+                            <img src="assets/images/reg3.jpg"  alt="Post One Photo" class="img-fluid rounded-lg">
+                          </div>
+                          <div class="col-md-9">
+                            <div class="card-body">
+                              <h6 class="card-title">Walker Requets</h6>
+                              <p class="card-text"> 8 Apr, 2021.</p>
+                              <p class="card-text"> Duration : 2 Hours</p>
+                              <p class="card-text"> Status : Accepted</p>
+                              <p class="card-text"><small class="text-muted">Walker : Amit </small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="row g-0">
+                          <div class="col-md-3">
+                            <img src="assets/images/reg4.jpg"  alt="Post One Photo" class="img-fluid rounded-lg">
+                          </div>
+                          <div class="col-md-9">
+                            <div class="card-body">
+                              <h6 class="card-title">Regular Check Up</h6>
+                              <p class="card-text">1 Apr, 2021</p>
+                              <p class="card-text">For 2 dogs</p>
+                              <p class="card-text">Status : Accepted</p>                              
+                              <p class="card-text"><small class="text-muted">Dr. Vinay Kumar</small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="row g-0">
+                          <div class="col-md-3">
+                            <img src="assets/images/reg2.jpg"  alt="Post One Photo" class="img-fluid rounded-lg">
+                          </div>
+                          <div class="col-md-9">
+                            <div class="card-body">
+                              <h6 class="card-title">Sitter Request</h6>
+                              <p class="card-text">10 Apr, 2021</p>
+                              <p class="card-text">Duration : 5 Hours</p>
+                              <p class="card-text">Status : Pending</p>                  
+                              <p class="card-text"><small class="text-muted">Not accepted yet</small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+
+
+          </div>
+         <!-- first row ended --> 
+
+        
+         <!-- second row -->
+         <div class="row second-row contents">
+          <div class="col-11">
+
+            <a name="tables"></a>
+            <br><center><h2><i>Records</i></h5></center><br>
+            <h3>Table style 1</h3>
+            <!-- tables -->
+              <table class="table table1">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Mail Id</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Vishal</td>
+                    <td>Das</td>
+                    <td>vishal.das@aimdek.com</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jane</td>
+                    <td>Doe</td>
+                    <td>jane@lost.com</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>jhon@unknown.com</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>Table style 2</h3>
+               <table class="table table-borderless table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Mail Id</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Vishal</td>
+                    <td>Das</td>
+                    <td>vishal.das@aimdek.com</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jane</td>
+                    <td>Doe</td>
+                    <td>jane@lost.com</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>jhon@unknown.com</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>Table style 3</h3>
+               <table class="table table-bordered table-danger">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Mail Id</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Vishal</td>
+                    <td>Das</td>
+                    <td>vishal.das@aimdek.com</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jane</td>
+                    <td>Doe</td>
+                    <td>jane@lost.com</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>jhon@unknown.com</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>Table style 4</h3>
+               <table class="table table-bordered table1">
+                <thead>
+                  <tr class="table-dark">
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Mail Id</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-success">
+                    <th scope="row">1</th>
+                    <td>Vishal</td>
+                    <td>Das</td>
+                    <td>vishal.das@aimdek.com</td>
+                  </tr>
+                  <tr class="table-danger">
+                    <th scope="row">2</th>
+                    <td>Jane</td>
+                    <td>Doe</td>
+                    <td>jane@lost.com</td>
+                  </tr>
+                  <tr class="table-warning">
+                    <th scope="row">3</th>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>jhon@unknown.com</td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- end tables -->
+
+            <!-- add user -->
+            <a name="addUser"></a>
+            <br><center><h2><i>Add User</i></h5></center><br>
+             <form class="form1">
+              <div class="mb-3">
+                <label for="username" class="form-label">Name</label>
+                <input type="email" class="form-control" id="username" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="age" class="form-label">Age</label>
+                <input type="number" class="form-control" id="age">
+              </div>
+              <div class="mb-3">
+                <label for="Email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="Password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="Password">
+              </div>
+              <div class="mb-3">
+                <label for="confirmpassword" class="form-label">Confirm password</label>
+                <input type="password" class="form-control" id="confirmpassword">
+              </div>
+              <div class="form-check">
+                <input class="gender" type="radio" name="gendermale" id="male">
+                <label class="gendermale" for="gender">
+                  Male
+                </label>
+                <input class="gender" type="radio" name="genderfemale" id="female">
+                <label class="gendermale" for="gender">
+                  Female
+                </label>
+              </div>
+              <div class="mb-3">
+                <label for="usertype" class="form-label">User Type</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Customer" id="Customer" checked>
+                  <label class="form-check-label" for="Customer">
+                    Customer
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Blogger" id="Blogger">
+                  <label class="form-check-label" for="Blogger">
+                    Blogger
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="third_party" id="third_party">
+                  <label class="form-check-label" for="third_party">
+                    Care Center/ Walker
+                  </label>                  
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form> 
+          <!-- end add user   -->
+          </div>          
+        </div>
+         <!-- second row ended -->
+
+        <!-- third row -->
+        <div class="row third-row">
+                    <!-- charts -->
+            <a name="charts"></a>
+            <br><center><h2><i>Charts</i></h5></center><br>
+            <div class="col-6">
+               <!-- Card init -->
+              <div class="card charts">
+                 <!-- Card header -->
+                 <div class="card-header">
+                    <!-- Title -->
+                    <h5 class="h3 mb-0">Line chart</h5>
+                 </div>
+                 <!-- Card body -->
+                 <div class="card-body">
+                    <div class="chart">
+                       <!-- Chart wrapper -->
+                       <canvas id="chart1" class="chart1"></canvas>
+                    </div>
+                 </div>
+              </div>
+            </div>  
+            <div class="col-6">
+              <div class="card charts">
+                 <!-- Card header -->
+                 <div class="card-header">
+                    <!-- Title -->
+                    <h5 class="h3 mb-0">Bar chart</h5>
+                 </div>
+                 <!-- Card body -->
+                 <div class="card-body">
+                    <div class="chart">
+                       <!-- Chart wrapper -->
+                       <canvas id="chart2" class="chart2"></canvas>
+                    </div>
+                 </div>
+              </div>
+            </div>
+          <!-- end charts -->
+        </div> 
+        
+        <!-- third row ends -->
+
+        <!-- pie chart -->
+        <div class="col-6 pie">
+          <div class="card charts">
+            <!-- Card header -->
+            <div class="card-header">
+              <!-- Title -->
+              <h5 class="h3 mb-0">Pie chart</h5>
+              </div>
+                <!-- Card body -->
+                <div class="card-body">
+                  <div class="chart">
+                    <!-- Chart wrapper -->
+                    <canvas id="chart3" class="chart3"></canvas>
+                  </div>
+                </div>
+          </div>
+        </div> 
+          
+        <!-- pie chart end -->
+        
+        </div>
+      <!-- end main-content -->  
+    </div>
+    <script src="assets/userscript.js"></script>
+  </body>
+</html>

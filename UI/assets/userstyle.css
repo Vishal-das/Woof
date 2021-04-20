@@ -1,0 +1,109 @@
+body {
+  background: #cb8ae3;
+  height: 100vh;
+  font-family: monospace;
+  font-size: 1.5rem;
+}
+nav {
+  background-color: #e1cfe3;
+}
+.search-form {
+  width: 50%;
+}
+
+.dog-logo{
+  		padding:3px 10px 0px 10px;
+ 		height:30px; 
+  		width:60px;}
+
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  box-shadow: -1px 0 0 rgba(0, 0, 0, .1);
+  max-width: 10vw;
+}
+
+#sidebar .nav-item {
+  text-align: center;
+  padding: 25px 0;
+}
+
+#sidebar .nav-item a {
+  color: rgba(0,0,0,.2);
+}
+
+#sidebar .nav-item a.active { 
+  color: #0d6efd;
+}
+
+.vertical-nav {
+  margin-top: 20vh;
+}
+
+.logo {
+  max-height: 30px;
+  margin: 15px 25px;
+}
+
+
+
+.main{
+	margin-left: 8%;
+	margin-top: 10%;
+}
+
+.contents{
+	justify-content: center;
+	align-items: center;
+}
+
+.table1{
+	background-color: #fff;
+	padding: 10px;
+}
+
+.form1{
+	background-color: #fff;
+	padding: 10px;
+	box-sizing: 10px;
+	border-radius: 10px;
+	margin-left: 20%;
+	width: 60%;
+	transition: 0.3s;
+	box-shadow: 0px 0px 10px 0px #000;
+}
+
+.form1:hover{
+	box-shadow: 0px 0px 10px 0px #f0f0f0;
+}
+
+.first-row, .second-row, .third-row{
+	padding-bottom: 10px; 
+}
+
+li a:hover:not(.active) {
+  background-color: #39374f;
+}
+
+.charts{
+	padding: 10px;
+	margin: 10px;
+	border-color: #000;
+	transition: 0.3s;
+	box-shadow: 0px 0px 10px 0px #000;
+}
+
+.charts:hover{
+	box-shadow: 0px 0px 10px 0px #f0f0f0;
+}
+
+.pie{
+	margin-left: 25%;
+	justify-content: center;
+	align-items: center;
+}
+
