@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../shared/userModel';
-import { UsersService } from '../shared/users.service';
+import { User } from '../../shared/userModel';
+import { UsersService } from '../../shared/users.service';
 
 @Component({
   selector: 'app-registration',
@@ -9,24 +9,29 @@ import { UsersService } from '../shared/users.service';
 })
 export class RegistrationComponent implements OnInit {
 
-  userModel:User=new User();
-  constructor(private _userService : UsersService) { }
+  userModel: User = new User();
+  constructor(private _userService: UsersService) { }
 
   ngOnInit(): void {
   }
 
-  submit(){
+  submit() {
     console.log(this.userModel);
   }
 
-  addUser(){
+  addUser() {
     this._userService.addUser(this.userModel)
-      .subscribe(()=>{
+      .subscribe(() => {
         console.log("data added successfully...");
         window.alert("data added successfully");
+        this.userModel.name = "";
+        this.userModel.email = "";
+        this.userModel.password = "";
+        this.userModel.address = "";
+        this.userModel.phno = 0;
       },
-        (err)=>{console.log(err);}
-        );
+        (err) => { console.log(err); }
+      );
   }
 
 }

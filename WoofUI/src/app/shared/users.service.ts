@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient,HttpErrorResponse} from '@angular/common/http'
-import { Observable,throwError} from 'rxjs';
+import { Observable,of,throwError} from 'rxjs';
 import {catchError} from 'rxjs/operators'
 import { User } from './userModel';
 
@@ -10,11 +10,13 @@ import { User } from './userModel';
 export class UsersService {
 
   static REST_API:string="http://localhost:8080/API/users";
+  userList:Array<User>=[];
+  currentUser:User= new User();
 
   constructor(private http:HttpClient) { }
 
   getUsers():Observable<User[]>{
-    let GET_USER_URL:string=UsersService.REST_API + "/list";
+    let GET_USER_URL:string=UsersService.REST_API + "/list";   
     return this.http.get<User[]>(GET_USER_URL);
   }
 
@@ -27,6 +29,15 @@ export class UsersService {
   errorHandler(error : HttpErrorResponse){
     console.log(error);
     return throwError(new Error(error.message || "Server error"));
+  }
+  
+  userLogin(_currentUser:User):void{
+    this.currentUser = _currentUser;
+    console.log(_currentUser);
+  }
+
+  checkUser():Observable<User>{
+    return of(this.currentUser);
   }
   
 }

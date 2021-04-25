@@ -1,0 +1,29 @@
+.carousel-indicators > li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+    
+.custom-card{
+      width: 80%;	
+      padding-left: 25%;
+}
+    
+.mycard{
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,10);
+        transition: 0.3s; 
+}
+    
+.mycard:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,2);  		
+}
+
+.card-img{
+      width: 320px;	
+      height: 300px;
+}
+
+
+h2,p{
+      color: white;
+}

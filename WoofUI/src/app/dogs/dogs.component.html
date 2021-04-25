@@ -1,0 +1,61 @@
+<div class="dogs-list">
+    <div class="row" style="max-width: 440px;">
+        <button class="btn btn-info btn-block btn-lg btn-custom-2" (click)="test()"><b>ADD DOG</b></button>
+    </div>
+    <div class="row" style="max-width: 440px;">
+        <div class="container-fluid d-flex justify-content-center">
+            <form class="form-container" #addDogForm="ngForm" (ngSubmit)="saveDog(addDogForm)">
+                <h2>Add Canine Details</h2>
+                <div class="mb-3">
+                    <label for="Name" class="form-label">Name</label>
+                    <input type="text" class="form-control" name="name" [(ngModel)]="_newDog.name" placeholder="Enter Your Petname">
+                </div>        
+                <div class="mb-3">
+                    <label for="dob" class="form-label">Date of Birth</label>
+                    <input type="date" class="form-control" name="dob" [ngModel]="dob">
+                </div>
+                <div class="mb-3">
+                    <label for="gender" class="form-label">Gender</label>
+                    <div class="row ml-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" [(ngModel)]="_newDog.gender" value="Male">
+                            <label class="form-check-label" for="Male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" [(ngModel)]="_newDog.gender" value="Female">
+                            <label class="form-check-label" for="Female">Female</label>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row" *ngFor="let dogs of _dogList">
+        <div class="card mb-3" style="max-width: 440px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="../../assets/images/reg1.jpg" alt="dogimage" class="card-img rounded">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title text-uppercase">{{dogs.name}}</h5>
+                        <p class="card-text">Gender : {{dogs.gender}}<br>Age : {{_currentYear - dogs.year}}</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button class="btn btn-outline-danger btn-custom" (click)="removeDog(dogs)">Remove</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-outline-success btn-custom" (click)="editDog(dogs)">Edit</button>
+                            </div>
+                        </div>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
