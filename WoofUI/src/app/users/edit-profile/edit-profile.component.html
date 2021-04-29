@@ -1,0 +1,61 @@
+<div class="row main">
+    <div class="col-12 d-flex justify-content-center">
+        <div class="row">
+            <div class="col-6">
+                <h4 class="text-white">User Profile</h4>
+                <div class="card" *ngIf="!editProfile; else elseBlock">
+                    <div class="card-body">
+                        <div class="row d-flex justify-content-center mb-4">
+                            <img src="../../../assets/images/user.jpg" class="user" alt="user">
+                        </div>
+                        <h5 class="card-title text-uppercase">{{_currentUser.name}}</h5>
+                        <p class="card-text">Email : <b>{{_currentUser.email}} </b></p>
+                        <p class="card-text">Contact number : <b>{{_currentUser.phno}}</b> </p>
+                        <p class="card-text">Address :<i> {{_currentUser.address}} </i></p>
+                        <div class="row">
+                            <div class="col-4">
+                                <button class="btn btn-info btn-custom" (click)="editDetails()">Edit Profile</button>
+                            </div>
+                            <div class="col-2"></div>
+                            <div class="col-4">
+                                <button class="btn btn-danger btn-custom" (click)="changePassword()">Change Password</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ng-template #elseBlock>
+                    <form class="form-container" #updateUserForm="ngForm" (ngSubmit)="updateUser(updateUserForm)">
+                        <h5>Edit User Details</h5>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" name="name" [(ngModel)]="_currentUser.name" placeholder="Enter Fullname">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" [(ngModel)]="_currentUser.email" placeholder="Enter mail id">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phno" class="form-label">Number</label>
+                            <input type="number" class="form-control" name="phno" [(ngModel)]="_currentUser.phno" placeholder="Enter Contact Number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" name="address" [(ngModel)]="_currentUser.address" placeholder="Enter Residential Address">
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary btn-block" type="submit">Save</button>
+                        </div>
+                    </form>
+                </ng-template>
+            </div>
+
+            <div class="col-2">
+
+            </div>
+            <div class="col-4">
+                <img src="../../../assets/images/sikimaru.jpg" alt="userProfile" class="customImage">
+            </div>
+        </div>
+
+    </div>
+</div>

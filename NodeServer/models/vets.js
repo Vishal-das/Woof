@@ -4,6 +4,6 @@ const schema = new mong.Schema({
     email:'string',
     ph_no:'Number',
     charges:'Number',
-    specialization:"string"
+    specialization:'string'
 });
 export var Vet = mong.model('Vet',schema,'Vets');

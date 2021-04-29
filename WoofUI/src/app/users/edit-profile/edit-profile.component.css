@@ -1,0 +1,29 @@
+.main{
+    margin: 5vh 0 0 22vh;
+}
+
+.customImage{
+    margin: 10vh 5vh 10vh 5vh;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,2);
+    border-radius: 10%;
+}
+
+.user{
+    width: 200px;
+    height: 200px;
+    border-radius: 40%;
+}
+
+.btn-custom{
+    border-radius: 40px;
+}
+
+.form-container{
+    position: absolute;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #000;
+}

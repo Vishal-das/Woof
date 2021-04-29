@@ -1,7 +1,7 @@
 <!-- Header -->
 <nav id="navBar" class="navbar navbar-expand-lg navbar-light fixed-top bg-info navCon">
     <img src="assets/images/favicon.png" alt="dog-logo" class="dog-logo">
-    <a class="navbar-brand" href="#home">Woof - Dog care system</a>
+    <a class="navbar-brand" routerLink="homepage" fragment="carouselExampleControls">Woof - Dog care system</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,23 +9,23 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="homepage">Home</a>
+          <a class="nav-link" routerLink="homepage" fragment="carouselExampleControls">Home</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Services
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="homepage/#services1" >Canine Management</a>		        
-            <a class="dropdown-item" href="homepage/#services2" >Acessories Stores</a>
+            <a class="dropdown-item" routerLink="/homepage" fragment="services1">Canine Management</a>		        
+            <a class="dropdown-item" routerLink="/homepage"  fragment="services2">Acessories Stores</a>
             <div class="dropdown-divider"></div>		          
-            <a class="dropdown-item" href="homepage/#services3" >Care centers</a>
-            <a class="dropdown-item" href="homepage/#services4" >Walkers</a>
-            <a class="dropdown-item" href="homepage/#services5" >Vet Online</a>
+            <a class="dropdown-item" routerLink="/homepage" fragment="services3">Care centers</a>
+            <a class="dropdown-item" routerLink="/homepage" fragment="services4" >Walkers</a>
+            <a class="dropdown-item" routerLink="/homepage" fragment="services5" >Vet Online</a>
           </div>
         </li>		      
         <li class="nav-item">
-          <a class="nav-link" href="homepage/#contactUs">Contact Us</a>
+          <a class="nav-link" routerLink="homepage" fragment="contactUs" >Contact Us</a>
         </li>		      		      
       </ul>
       <form class="form-inline my-2 my-lg-0">		      

@@ -1,0 +1,37 @@
+<div>
+    <!-- walkerReuest list -->
+    <div class="row list" style="max-width: 640px;">
+        <div *ngFor="let requests of walkerRequestList">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="../../assets/images/reg3.jpg" alt="walkerRequestImage" class="card-img rounded">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title text-uppercase">Walker Request</h5>
+                            <p class="card-text">Date : {{requests.day}}/{{requests.month}}/{{requests.year}}<br>Duration : {{requests.duration}} hour(s)</p>
+                            <p class="card-text text-danger text-uppercase">Status : <b>{{requests.status}}</b></p>
+                            <p class="card-text"><small class="text-muted">
+                                For {{requests.no_of_dogs}} dogs<br>
+                                <Address>Address : {{requests.address}}<br>
+                                City : {{requests.city}}, State : {{requests.state}}, Pincode : {{requests.pincode}}</Address> 
+                            </small></p>                        
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- <button class="btn btn-outline-success btn-custom "
+                                        (click)="editRequest(requests)">Edit</button> -->
+                                </div>
+                                <div class="col-md-6">                                
+                                    <button class="btn btn-danger btn-custom"
+                                        (click)="removeRequest(requests)">Remove</button>                                    
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- walkerReuest list -->
+</div>

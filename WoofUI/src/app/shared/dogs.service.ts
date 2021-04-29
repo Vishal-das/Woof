@@ -22,15 +22,21 @@ export class DogsService {
   test(obj:Dog){
     console.log(obj);
   }
+
   addDog(obj : Dog):Observable<any>{
     let POST_DOG_URL : string = DogsService.REST_API + "/";
     return this.http.post(POST_DOG_URL,obj)
       .pipe(catchError(this.errorHandler));
   }
 
+  updateDog(_id:string,data:Dog){
+    let UPDATE_DOG_URl : string = `${DogsService.REST_API}/` + _id;
+    return this.http.put(UPDATE_DOG_URl,data);
+  }
+
   deleteDog(_id:any):Observable<any>{
-    let DELETE_URL = `${DogsService.REST_API}/` + _id;
-    return this.http.delete(DELETE_URL,_id);
+    let DELETE_DOG_URL = `${DogsService.REST_API}/` + _id;
+    return this.http.delete(DELETE_DOG_URL,_id);
   }
 
   errorHandler(error : HttpErrorResponse){

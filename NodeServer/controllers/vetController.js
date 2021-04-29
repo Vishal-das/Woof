@@ -69,7 +69,7 @@ export const updateVet = (req,res) => {
 
 export const deleteVet = (req,res)=>{
     if(!ObjectId.isValid(req.params.id))
-    return res.status(400).send(`No record with given id ${req.params.id}`);
+        return res.status(400).send(`No record with given id ${req.params.id}`);
 
     Vet.findByIdAndDelete(req.params.id,(err,data)=>{
         if(err){

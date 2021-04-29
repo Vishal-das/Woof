@@ -6,6 +6,7 @@ import {_mong} from './db.js'
 import userRouter from './routes/usersRoutes.js';
 import dogRouter from './routes/dogRoutes.js';
 import vetRouter from './routes/vetRoutes.js';
+import walkerRequestRouter from './routes/walkerRequestRouter.js'
 
 const app = express();
 const PORT = 8080;
@@ -14,7 +15,7 @@ const API_URL = `http://localhost:${PORT}/API/users`;
 const API_URL_DOG = `http://localhost:${PORT}/API/dogs`;
 const API_URL_ECOM = `http://localhost:${PORT}/API/products`;
 const API_URL_MDS = `http://localhost:${PORT}/API/vets`;
-const API_URL_WKS = `http://localhost:${PORT}/API/walkers`;
+const API_URL_RQT = `http://localhost:${PORT}/API/requests`;
 
 
 // //provide the CORS permission host to write request to this node server
@@ -38,21 +39,21 @@ app.get('/',(req,res)=>{
                     <b>POST request </b>: <i> ${API_URL_DOG}/ </i><br>
                     <b>PUT request </b>: <i>${API_URL_DOG}/{id} </i> <br>
                     <b>DELETE request </b>: <i>${API_URL_DOG}/{id}</i><br>
-                    <b><h4>E-commerce restAPI</h4></b>
-                    <b>GET request </b>: <a href="${API_URL_ECOM}/list"> ${API_URL_ECOM}/list </a> <br>
-                    <b>POST request </b>: <i> ${API_URL_ECOM}/ </i><br>
-                    <b>PUT request </b>: <i>${API_URL_ECOM}/{id} </i> <br>
-                    <b>DELETE request </b>: <i>${API_URL_ECOM}/{id}</i><br>
+                    <b><h4>Requests restAPI</h4></b>
+                    <b>GET request </b>: <a href="${API_URL_RQT}/list"> ${API_URL_RQT}/list </a> <br>
+                    <b>POST request </b>: <i> ${API_URL_RQT}/ </i><br>
+                    <b>PUT request </b>: <i>${API_URL_RQT}/{id} </i> <br>
+                    <b>DELETE request </b>: <i>${API_URL_RQT}/{id}</i><br>                    
                     <b><h4>Medical-service restAPI</h4></b>
                     <b>GET request </b>: <a href="${API_URL_MDS}/list"> ${API_URL_MDS}/list </a> <br>
                     <b>POST request </b>: <i> ${API_URL_MDS}/ </i><br>
                     <b>PUT request </b>: <i>${API_URL_MDS}/{id} </i> <br>
                     <b>DELETE request </b>: <i>${API_URL_MDS}/{id}</i><br>
-                    <b><h4>Walkers restAPI</h4></b>
-                    <b>GET request </b>: <a href="${API_URL_WKS}/list"> ${API_URL_WKS}/list </a> <br>
-                    <b>POST request </b>: <i> ${API_URL_WKS}/ </i><br>
-                    <b>PUT request </b>: <i>${API_URL_WKS}/{id} </i> <br>
-                    <b>DELETE request </b>: <i>${API_URL_WKS}/{id}</i><br>
+                    <b><h4>E-commerce restAPI</h4></b>
+                    <b>GET request </b>: <a href="${API_URL_ECOM}/list"> ${API_URL_ECOM}/list </a> <br>
+                    <b>POST request </b>: <i> ${API_URL_ECOM}/ </i><br>
+                    <b>PUT request </b>: <i>${API_URL_ECOM}/{id} </i> <br>
+                    <b>DELETE request </b>: <i>${API_URL_ECOM}/{id}</i><br>
                     `;
     res.send(info)
     
@@ -64,4 +65,5 @@ app.listen(PORT, () => console.log(`Server running on port: http://localhost:${P
 app.use('/API/users',userRouter);
 app.use('/API/dogs',dogRouter);
 app.use('/API/vets',vetRouter);
+app.use('/API/requests',walkerRequestRouter);
 

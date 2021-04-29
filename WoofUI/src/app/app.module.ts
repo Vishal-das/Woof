@@ -11,6 +11,11 @@ import { NavComponent } from './Homepage/nav/nav.component';
 import { MainComponent } from './main/main.component';
 import { SidenavComponent } from './users/sidenav/sidenav.component';
 import { DogsComponent } from './dogs/dogs.component';
+import { WalkerRequestsComponent } from './walker-requests/walker-requests.component';
+import { AddWalkerRequestComponent } from './users/add-walker-request/add-walker-request.component';
+import { EditProfileComponent } from './users/edit-profile/edit-profile.component';
+import { AppointmentsComponent } from './users/appointments/appointments.component';
+import { ShopComponent } from './users/shop/shop.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,12 @@ import { DogsComponent } from './dogs/dogs.component';
     NavComponent,
     MainComponent,
     SidenavComponent,
-    DogsComponent
+    DogsComponent,
+    WalkerRequestsComponent,
+    AddWalkerRequestComponent,
+    EditProfileComponent,
+    AppointmentsComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,

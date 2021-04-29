@@ -25,8 +25,8 @@ export class LoginComponent implements OnInit {
     
     if(user!=undefined){
       if(user.password==this.userModel.password){
-        this._route.navigateByUrl("/homepage");
         this._userService.userLogin(user);
+        this._route.navigateByUrl("/userHomepage");
       }
       else{
         alert("Invalid password!");

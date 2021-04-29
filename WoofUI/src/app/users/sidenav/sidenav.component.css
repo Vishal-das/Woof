@@ -24,13 +24,13 @@
     color: rgba(0,0,0,.2);
 }
   
-#sidebar .nav-item a.active { 
-    color:#1f3c4f;
+.active svg{ 
+    color:black;
 }
   
-/* .vertical-nav {
-    margin-top: 5vh;
-} */
+.vertical-nav {
+    margin-top: 3vh;
+}
   
 .logo {
     max-height: 30px;

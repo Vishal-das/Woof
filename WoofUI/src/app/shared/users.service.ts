@@ -26,6 +26,11 @@ export class UsersService {
       .pipe(catchError(this.errorHandler))
   }
 
+  updateUser(_id:any,data:User):Observable<any>{
+    let UPDATE_USER_URL :string = `${UsersService.REST_API}/` + _id;
+    return this.http.put(UPDATE_USER_URL,data);
+  }
+
   errorHandler(error : HttpErrorResponse){
     console.log(error);
     return throwError(new Error(error.message || "Server error"));
@@ -33,11 +38,24 @@ export class UsersService {
   
   userLogin(_currentUser:User):void{
     this.currentUser = _currentUser;
-    console.log(_currentUser);
+    this.saveUserToLocalStorage();
   }
 
   checkUser():Observable<User>{
     return of(this.currentUser);
   }
   
+  saveUserToLocalStorage(){
+    localStorage.setItem("currentUser",JSON.stringify(this.currentUser));
+  }
+
+  getUserFormLocalStorage(){
+    if(localStorage.getItem("currentUser")!=null){
+      this.currentUser = JSON.parse(localStorage.getItem("currentUser")||"nodata");      
+    }
+  }
+
+  removeUserFromLocalStorage(){
+    localStorage.clear();
+  }
 }

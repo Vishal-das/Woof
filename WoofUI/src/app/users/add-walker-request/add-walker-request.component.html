@@ -1,0 +1,54 @@
+<div class="row main">
+    <div class="col-12 d-flex justify-content-center">
+        <div class="col-2">
+            <img src="../../../assets/images/reg3-removebg-preview.png" alt="addWalkerRequest" class="customImage">
+        </div>
+        <div class="col-1">
+
+        </div>
+        <div class="col-6">
+            <form class="form-container" #addWalkerRequestForm="ngForm"
+                (ngSubmit)="addWalkerRequest(addWalkerRequestForm)">
+                <h4>Send Walker Request</h4>
+                <div class="mb-2">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" name="address" [(ngModel)]="_currentUser.address"
+                        placeholder="Address line 1">
+                    <input type="text" class="form-control mb-1" name="addressLine2" [(ngModel)]="_addressLine2"
+                        placeholder="Address Line 2">
+                    <div class="row mb-1">
+                        <div class="col-4">
+                            <input type="text" class="form-control" name="city" [(ngModel)]="_addWalkerRequest.city"
+                                placeholder="City">
+                        </div>
+                        <div class="col-4">
+                            <input type="text" class="form-control mb-1" name="state"
+                                [(ngModel)]="_addWalkerRequest.state" placeholder="State">
+                        </div>
+                        <div class="col-4">
+                            <input type="number" class="form-control" name="pincode"
+                                [(ngModel)]="_addWalkerRequest.pincode" placeholder="Pincode">
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" class="form-control" name="_date" [(ngModel)]="_date" placeholder="DD/MM/YYYY">
+                </div>
+                <div class="form-group mb-2">
+                    <label for="duration">Duration</label>
+                    <input type="number" class="form-control" name="duration" [(ngModel)]="_addWalkerRequest.duration"
+                        placeholder="Duration in hours">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="no_of_dogs">Number Of Dog</label>
+                    <input type="number" class="form-control" name="no_of_dogs"
+                        [(ngModel)]="_addWalkerRequest.no_of_dogs" placeholder="Select number of dogs">
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-success btn-block" type="submit">Send Request</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

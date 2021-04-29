@@ -10,6 +10,7 @@ export class MainComponent implements OnInit {
   constructor(private _userService : UsersService) { }
 
   ngOnInit(): void {
+    this._userService.getUserFormLocalStorage();
     console.log(this._userService.currentUser.email);
   }
 
